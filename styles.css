@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%); 
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--pale-blue);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 36rem;
+    background-color: white;
+    border-radius: 2.5rem;
+    overflow: hidden;  /* permite que se oculte el desbordamiento de la imagen */
+
+    font-family: 'Red Hat Display', sans-serif;
+
+}
+
+
+.image-hero{
+    width: 100%;
+    object-fit: cover;
+}
+
+.image-hero{
+    width: 100%;
+}
+
+.title-card{
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    color: var(--dark-blue);
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+.description-text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.description-card{
+    width: 80%;
+    font-size: 1.6rem;
+    color: var(--desaturated-blue);
+    text-align: center;
+    
+    padding-bottom: 2rem;
+}
+
+.plan-container{
+    
+    display: flex;
+    justify-content: center;
+}
+
+.plan-box{
+    width: 80%;
+    display: flex;
+    background-color: var(--very-pale-blue) ;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+}
+
+.plan-box-left{
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+
+.information-plan{
+    padding-left: 2rem;
+    display: block;
+    text-align: left;
+}
+
+.title-plan{
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+}
+
+.price-plan{
+    font-size: 1.5rem;
+    color:var(--desaturated-blue)
+}
+
+.change-plan-box{
+    width: 20%;
+    display: flex;
+    
+}
+
+
+
+.plan-change{
+    font-size: 1.4rem;
+    color: var(--bright-blue);
+    font-weight: 900;
+    text-align: right;
+    
+}
+
+.plan-change:hover{
+    color: var(--desaturated-blue);
+    
+}
+
+.buttons-container{
+    display: flex;
+   justify-content: center;
+}
+
+.proceed-payment{
+    display: block;
+    width: 80%;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 0.8rem;
+    margin: 3rem 0;
+    background-color: var(--bright-blue);
+    color: white;
+    font-weight: 900;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.proceed-payment:hover{
+    background-color: var(--desaturated-blue);
+
+}
+
+.cancel-btn{
+    display: block;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-decoration: none;
+    color: var(--desaturated-blue);
+    font-weight: 900;
+}
+
+.cancel-btn:hover{
+    color: var(--dark-blue);
+}
+
+
+@media only screen and (max-width:37.5rem){
+    .body{
+        background-image: url(images/pattern-background-mobile.svg);
+        font-size: 1.4rem;
+        min-height: 100vh;
+    }
+
+    .container{
+        width: 87%;
+        left: 50%;
+        top: 50%;
+    }
+
+    .title-card{
+        font-size: 2.2rem;
+    }
+
+    .proceed-payment{
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .description-card{
+        font-size: 1.5rem;
+    }
+
+    .information-plan{
+        padding-left: 1.5rem;
+    }
+
+
+
+    .title-plan{
+        font-size: 1.3rem;
+    }
+    .price-plan{
+        font-size:1.2rem;
+    }
+    
+    .plan-change{
+        font-size: 1.2rem;
+    }
+}
